@@ -195,10 +195,10 @@ Teniendo ya la posibilidad de que nuestros usuarios accedan al servicio de almac
 <img src="../imgs/STATUS.png" alt="logo" height="250" width=80% align='center'/>
 </p>
 
-Adicionalmente, podemos ingresar en nuestro contenedor `MariaDB`, 
+Adicionalmente, podemos ingresar en nuestro contenedor `MariaDB` mediante las credenciales que definimos en las variables de entorno de nuestro fichero `docker-compose`. De esta forma, podemos observar que dentro de la base de datos `owncloud` se puede apreciar cómo fueron creadas satisfactoriamente todas las tablas que dicho servicio utiliza.
 
 <p align='center'>
-<img src="../imgs/MARIADB.png" alt="logo" height="250" width=80% align='center'/>
+<img src="../imgs/MARIADB.png" alt="logo" height="400" width=50% align='center'/>
 </p>
 
 ## Referencias
