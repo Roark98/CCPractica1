@@ -2,6 +2,8 @@
 
 **Nombre del estudiante**: *Roberto Castro Izurieta*
 
+**Desarrollado en:** *Windows 10 - WSL2*
+
 En esta sección se plasman las configuraciones y ficheros utilizador para la elaboración del escenario 2 utilizando la teccnología de `docker-compose`.
 
 ## Arquitectura implementada
