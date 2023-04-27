@@ -203,6 +203,8 @@ Adicionalmente, podemos ingresar en nuestro contenedor `MariaDB` mediante las cr
 <img src="../imgs/MARIADB.png" alt="logo" height="400" width=50% align='center'/>
 </p>
 
+Utilizando estas mismas consideraciones se desarrolló el escenario 1, el cual se puede encontrar muy brevemente [aquí](https://github.com/Roark98/CCPractica1/tree/main/Escenario1), ya que se sobreentiende que practicamente las mismas configuraciones, y conocimientos fueron aplicados en este escenario de dificultad aumentada.
+
 ## Referencias
 - https://hub.docker.com/r/owncloud/server
 - https://hub.docker.com/r/bitnami/openldap/
