@@ -1,4 +1,6 @@
-# Escenario 2
+# Práctica 1: Elaboración de escenario 2
+
+**Nombre del estudiante**: *Roberto Castro Izurieta*
 
 En esta sección se plasman las configuraciones y ficheros utilizador para la elaboración del escenario 2 utilizando la teccnología de `docker-compose`.
 
@@ -180,4 +182,31 @@ En las variables de entorno podemos ver cómo se define el dominio `cloud.com` p
 Considerando que como requerimiento de la práctica se debía contar con al menos un grupo de usuarios, la imágen utilizada nos ofrece justamente dicho aspecto por defecto. Si recurrimos a la [documentación](https://hub.docker.com/r/bitnami/openldap/) de dicha imágen, podemos observar que de manera predeterminada se incorporan los usuarios `user01` y `user02` con sus respectivas contraseñas `bitnami1` y `bitnami2`. Dichos usuarios pertenecen a un grupo por defecto `readers` que a su vez se encuentran bajo la unidad organizativa `users`.
 
 ## Pruebas de funcionamiento
+
+Habiendo ingresado como administrador al servicio Owncloud y luego de haber instalado la extensión de integración LDAP, se realizó la respectiva configuración proporcionando los datos referentes al servidor OpenLDAP ya creado. Se puede observar el estado `OK` del servidor, al proporcionar el host `openldap` (nombre de nuestro contenedor), el puerto interno del mismo, y las credenciales de administrador.
+
+<p align='center'>
+<img src="../imgs/CONF_LDAP.png" alt="logo" height="450" width=50% align='center'/>
+</p>
+
+Teniendo ya la posibilidad de que nuestros usuarios accedan al servicio de almacenamiento cloud, podemos revisar las mediciones realizadas por el servicio `HAProxy` dentro de la dirección `localhost:80/stats`. Se puede ver al algoritmo `roundrobin` en acción, repartiendo satisfactoriamente la carga entre ambos servidores owncloud.
+
+<p align='center'>
+<img src="../imgs/STATUS.png" alt="logo" height="250" width=80% align='center'/>
+</p>
+
+Adicionalmente, podemos ingresar en nuestro contenedor `MariaDB`, 
+
+<p align='center'>
+<img src="../imgs/MARIADB.png" alt="logo" height="250" width=80% align='center'/>
+</p>
+
+## Referencias
+- https://hub.docker.com/r/owncloud/server
+- https://hub.docker.com/r/bitnami/openldap/
+- https://doc.owncloud.com/server/next/admin_manual/installation/docker/
+- https://www.haproxy.com/blog/how-to-run-haproxy-with-docker
+- https://doc.owncloud.com/server/next/admin_manual/configuration/user/user_auth_ldap.html
+
+
 
